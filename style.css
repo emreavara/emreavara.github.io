@@ -25,6 +25,9 @@ body {
   overflow: auto;
 }
 
+#menu{
+  display: none;
+}
 .navigation li{
   display: inline;
   margin: 10px;
@@ -43,13 +46,18 @@ body {
 /* .navbar-list {
   padding-inline-start: 0px;
 } */
-.brand {
+#brand {
   display: inline;
+  align-items: left;
   color: var(--creme);
   border-right: 2px solid var(--creme);
   margin-block-start: 0em;
   margin-block-end: 0em;
   padding: 5px;
+}
+
+#brand:hover{
+  cursor: pointer;
 }
 
 .navigation li:hover *{
@@ -70,6 +78,10 @@ body {
   opacity: 1;
 }
 
+#menu{
+  float: right;
+  margin-right: 5px;
+}
 
 /* ########################################################################## */
 /* PROFILE */
@@ -89,6 +101,7 @@ body {
   height: 400px;
   align-items: center;
   background-clip: border-box;
+  cursor:context-menu;
 }
 #profile-photo {
   position: absolute;
@@ -157,7 +170,10 @@ h2 {
   animation-duration: 4s;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+  #menu{
+    display: inline;
+  }
   .text-overlay{
     font-size: 0.6rem;
   }
@@ -182,16 +198,18 @@ h2 {
     width: 100%;
   }
   .navigation ul {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
     padding-inline-start: 0px;
   }
   #profile-photo {
     width: 75%;
   }
-  .brand {
+  #brand {
     display: block;
-    text-align: center;
+    text-align: left;
     border-bottom: 2px solid var(--creme);
     border-right: 0px;
-    margin: 3px;
+    padding: 5px;
   }
 }
